@@ -25,3 +25,24 @@ public:
     }
 };
 
+int main() {
+    int n;
+    if (!(cin >> n)) {
+        return 0;
+    }
+    vector<int> numbers(n);
+    for (int i = 0; i < n; i++) {
+        cin >> numbers[i];
+    }
+    int target;
+    cin >> target;
+    Solution solution;
+    vector<int> result = solution.twoSum(numbers, target);
+    if (result.size() == 2) {
+        cout << result[0] << " " << result[1];
+    } else {
+        cout << "-1 -1";
+    }
+    return 0;
+}
+
